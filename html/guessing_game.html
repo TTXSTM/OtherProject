@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+    var answer = parseInt(Math.random() * 100);
+    var userAnswer = +prompt("Ygodayte chislo ot 0 do 100");
+    var maxTryCount = 5;
+
+    for(var tryCount = 1; tryCount < maxTryCount; tryCount++){
+        if(userAnswer == answer){
+    	    alert("You Wine!");
+    	    break;
+    	    // continue; - Сразу переходим к следующей итерации
+        } else if(userAnswer > answer){
+            alert("Clihcom slihcom bolhoe");
+        } else if(userAnswer < answer){
+    	    alert("chislo slihcom malenkoe");
+        }
+        document.write("y bas ostalos " + (maxTryCount - tryCount) + " popitok <br>");
+
+        userAnswer = +prompt("Poprobyute ehe pas. Vvedite chislo ot 0 do 100\n y bas ostalos " + (maxTryCount - tryCount) + " popitok");
+
+    }
+    if(tryCount == maxTryCount)
+    	alert("You Lose!");
+    alert("Pravelniu otvet: " + answer);
+
+</script>
